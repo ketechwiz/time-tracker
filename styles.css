@@ -1,36 +1,74 @@
+/* Google Font (replace with your choice) */ 
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap'); 
+
 body { 
-  font-family: sans-serif; 
-  text-align: center; 
+    font-family: 'Roboto Condensed', sans-serif; 
+    background-color: #f4f4f4; /* Light gray background */ 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    min-height: 100vh; 
+    margin: 0; 
 } 
 
-.timer { 
-  font-size: 2em; 
-  margin-bottom: 1em; 
+.container { 
+    background-color: #fff; 
+    padding: 30px; 
+    border-radius: 8px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */ 
+    text-align: center; 
 } 
 
-button { 
-  padding: 0.5em 1em; 
-  margin: 0.5em; 
-  background-color: #4CAF50; /* Green */ 
-  border: none; 
-  color: white; 
-  text-align: center; 
-  text-decoration: none; 
-  display: inline-block; 
-  font-size: 16px; 
-  cursor: pointer; 
+h1 { 
+    color: #333; /* Dark gray heading */ 
+    margin-bottom: 20px; 
 } 
 
-button:disabled { 
-  background-color: #ccc; 
-  cursor: default; 
+.timer-section { 
+    margin-bottom: 20px; 
 } 
 
-#time-entries { 
-  list-style-type: none; 
-  padding: 0; 
+.timer-display { 
+    font-size: 2em; 
+    font-weight: bold; 
+    color: #007bff; /* Blue timer */ 
+    margin-bottom: 10px; 
 } 
 
-#time-entries li { 
-  margin-bottom: 0.5em; 
+.buttons button { 
+    padding: 10px 20px; 
+    margin: 0 5px; 
+    background-color: #007bff; /* Blue buttons */ 
+    color: white; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease; /* Smooth transition on hover */ 
+} 
+
+.buttons button:hover { 
+    background-color: #0069d9; /* Darker blue on hover */ 
+} 
+
+.buttons button:disabled { 
+    background-color: #ccc; 
+    cursor: default; 
+} 
+
+.time-entries { 
+    margin-top: 20px; 
+} 
+
+.time-entries h2 { 
+    color: #333; 
+    margin-bottom: 10px; 
+} 
+
+.time-entries ul { 
+    list-style: none; 
+    padding: 0; 
+} 
+
+.time-entries li { 
+    margin-bottom: 5px; 
 }
