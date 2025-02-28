@@ -2,66 +2,84 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap'); 
 
 body { 
+    background: linear-gradient(to bottom, #4CAF50, #81C784); /* Gradient background */ 
     font-family: 'Roboto Condensed', sans-serif; 
-    background-color: #f4f4f4; /* Light gray background */ 
     display: flex; 
     justify-content: center; 
     align-items: center; 
     min-height: 100vh; 
     margin: 0; 
+    overflow: hidden; /* Prevent scrollbars */ 
 } 
 
 .container { 
-    background-color: #fff; 
-    padding: 30px; 
-    border-radius: 8px; 
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */ 
+    background-color: rgba(255, 255, 255, 0.8); 
+    border-radius: 15px; 
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); 
+    padding: 40px; 
     text-align: center; 
+    animation: glow 2s ease-in-out infinite alternate; 
+    overflow: hidden; /* Prevent scrollbars */ 
+} 
+
+@keyframes glow { 
+    0% { box-shadow: 0 0 20px rgba(0, 255, 0, 0.5); } 
+    100% { box-shadow: 0 0 40px rgba(0, 255, 0, 0.2); } 
 } 
 
 h1 { 
-    color: #333; /* Dark gray heading */ 
-    margin-bottom: 20px; 
+    color: #333; 
+    margin-bottom: 30px; 
+    text-shadow: 2px 2px 4px #000; 
+    animation: pulse 1s ease-in-out infinite alternate; 
 } 
 
-.timer-section { 
-    margin-bottom: 20px; 
+@keyframes pulse { 
+    0% { transform: scale(1); } 
+    50% { transform: scale(1.05); } 
+    100% { transform: scale(1); } 
 } 
 
 .timer-display { 
-    font-size: 2em; 
+    font-size: 4em; 
     font-weight: bold; 
-    color: #007bff; /* Blue timer */ 
-    margin-bottom: 10px; 
+    color: #fff; 
+    text-shadow: 2px 2px 4px #000; 
+    margin-bottom: 20px; 
+    animation: pulse 1.5s ease-in-out infinite alternate; 
 } 
 
 .buttons button { 
-    padding: 10px 20px; 
-    margin: 0 5px; 
-    background-color: #007bff; /* Blue buttons */ 
+    padding: 15px 30px; 
+    margin: 0 10px; 
+    background-color: #007bff; 
     color: white; 
     border: none; 
-    border-radius: 5px; 
+    border-radius: 8px; 
     cursor: pointer; 
-    transition: background-color 0.3s ease; /* Smooth transition on hover */ 
+    transition: background-color 0.3s ease, transform 0.3s ease; 
+    font-size: 1.2em; 
 } 
 
 .buttons button:hover { 
-    background-color: #0069d9; /* Darker blue on hover */ 
+    background-color: #0069d9; 
+    transform: scale(1.05); 
 } 
 
 .buttons button:disabled { 
     background-color: #ccc; 
     cursor: default; 
+    transform: scale(1); 
 } 
 
 .time-entries { 
-    margin-top: 20px; 
+    margin-top: 30px; 
 } 
 
 .time-entries h2 { 
     color: #333; 
     margin-bottom: 10px; 
+    text-shadow: 1px 1px 2px #000; 
 } 
 
 .time-entries ul { 
@@ -71,4 +89,5 @@ h1 {
 
 .time-entries li { 
     margin-bottom: 5px; 
+    font-style: italic; 
 }
