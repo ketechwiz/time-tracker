@@ -1,19 +1,33 @@
 <!DOCTYPE html> 
-<html> 
+<html lang="en"> 
 <head> 
-<title>Time Tracker</title> 
-<link rel="stylesheet" href="style.css"> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Time Tracker</title> 
+    <link rel="stylesheet" href="style.css">  <!-- Link to your CSS file --> 
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">  <!-- Example Google Font --> 
 </head> 
 <body> 
-  <h1>Time Tracker</h1> 
-  <div class="timer"> 
-    <span id="timer-display">00:00:00</span> 
-  </div> 
-  <button id="start-button">Start</button> 
-  <button id="stop-button" disabled>Stop</button> 
-  <button id="reset-button" disabled>Reset</button> 
-  <ul id="time-entries"></ul> 
+    <div class="container"> 
+        <h1>Time Tracker</h1> 
+        <div class="timer-section"> 
+            <div class="timer-display"> 
+                <span id="timer-display">00:00:00</span> 
+            </div> 
+            <div class="buttons"> 
+                <button id="start-button">Start</button> 
+                <button id="stop-button" disabled>Stop</button> 
+                <button id="reset-button" disabled>Reset</button> 
+            </div> 
+        </div> 
+        <div class="time-entries"> 
+            <h2>Time Entries</h2> 
+            <ul id="time-entries"></ul> 
+        </div> 
+    </div> 
 
-  <script src="script.js"></script> 
+    <script src="script.js"></script> <!-- Link to your JavaScript file --> 
 </body> 
 </html>
